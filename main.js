@@ -43,7 +43,19 @@ const displayPost = () => {
 // work with other apis and become a real developer!!
 
 const fetchFive = () => {
-  console.log(arrayOfPosts[0]);
+  let fivePosts = [];
+  fetch('http://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(posts => arrayOfPosts = posts)
+    .then(fivePosts.push(arrayOfPosts[0], arrayOfPosts[1], arrayOfPosts[2], arrayOfPosts[3], arrayOfPosts[4]))
+    .then(console.log(fivePosts));
+    fivePosts.map((post, index) => {
+      const li = document.createElement('li')
+      const text = document.createTextNode(`#${index}, Title: ${post.title}:  ${post.body}, by user: ${post.userId}`)
+      li.appendChild(text)
+      document.getElementById('all-posts').append(li)
+    })
+    document.querySelector('h3').innerHTML = 'Five Posts'
 }
 
-fetchFive();
+// fetchFive();

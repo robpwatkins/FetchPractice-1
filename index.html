@@ -10,13 +10,22 @@
 
   <!-- When you click this button, the posts collected in the fetch request 
     will be logged in the console in your devtools tray -->
+
   <button onclick="consolePosts()">Console Posts</button>
 
   <!-- When you click this button the posts collected from the fetch request 
     will be displayed below in the ul element with the id='all-posts' -->
+
   <button onclick="displayPost()">Display Posts</button>
-  <button onclick="">Fetch 5 Posts</button>
+
+    <!-- When you click this button it'll fetch you some posts, five of them. -->
+  <button onclick="fetchFive()">Fetch 5 Posts</button>
+
+    <!-- When you click this button it'll fetch the comments, but who knows
+    where those are. -->
   <button onclick="">Fetch Comments</button>
+
+    <!-- When you click this button it'll fetch the users, which seems doable. -->
   <button onclick="">Fetch Users</button>
   <div>
     <h3>All Posts</h3>
