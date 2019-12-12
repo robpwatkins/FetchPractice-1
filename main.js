@@ -12,23 +12,11 @@ window.onload = function() {
 // parameter brackets (). Then it will turn the response (data it's getting back), saved here as res. 
 // The res.json will not be saved as posts and saved into the variable, arrayOfPosts
 
-// const getPosts = () => {
-//   fetch('http://jsonplaceholder.typicode.com/posts')
-//     .then(res => res.json())
-//     .then(posts => arrayOfPosts = posts)
-// }
-
 const getPosts = () => {
   fetch('http://jsonplaceholder.typicode.com/posts')
-  .then(res => {
-    if(!res.ok) {
-      throw Error(res.statusText)
-    } return res.json()
-  })
-  .then(posts => arrayOfPosts = posts)
-  .catch(err => console.log(`Error,  ${err}`))
+    .then(res => res.json())
+    .then(posts => arrayOfPosts = posts)
 }
-
 
 // this function logs the results in your browsers console
 
